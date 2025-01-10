@@ -1,0 +1,17 @@
+.container {
+  min-height: 100%;
+  padding: 3rem 1.5rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  background-color: orange;
+}
+.addWidget {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  border: 2px dashed grey;
+  border-radius: 25px;
+}

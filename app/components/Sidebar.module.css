@@ -1,0 +1,61 @@
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.header {
+  height: 120px;
+}
+.header .top {
+  height: 50%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(var(--light-blue-rgb));
+  color: rgb(var(--white-rgb));
+}
+.header .bot {
+  height: 50%;
+}
+.header .bot .buttonGroup {
+  width: 100%;
+  height: 100%;
+}
+.header .bot .buttonGroup > button {
+  flex: 1;
+  border: 0;
+  border-radius: 0;
+  background-color: rgb(var(--light-grey-rgb));
+  color: rgb(var(--black-rgb));
+}
+.header .bot .buttonGroup > button:hover {
+  background-color: rgb(var(--grey-rgb));
+}
+.header .bot .buttonGroup > button:first-child {
+  border-bottom: 3px solid rgb(var(--red-rgb));
+}
+.main {
+  height: calc(100vh - 120px - 60px);
+  overflow-y: auto;
+  padding: 1.5rem;
+  background-color: rgba(var(--grey-rgb), 0.75);
+}
+.main .searchInput {
+  width: 100%;
+  background-color: rgb(var(--white-rgb));
+}
+.main .searchInput:hover {
+  background-color: rgba(var(--white-rgb), 0.75);
+}
+.main .searchInput input {
+  padding: 0.5rem;
+}
+.footer {
+  height: 60px;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(var(--dark-grey-rgb), 0.75);
+  color: rgb(var(--white-rgb));
+}
