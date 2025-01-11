@@ -21,13 +21,26 @@ import RedoIcon from "@mui/icons-material/Redo";
 import {
   AccordionIcon,
   AlertIcon,
+  AnimatedHeadlineIcon,
   BasicGalleryIcon,
+  BlockquoteIcon,
   ButtonIcon,
+  CodeHighlightIcon,
   ContainerIcon,
+  CountdownIcon,
   CounterIcon,
+  CTAIcon,
   DividerIcon,
+  FacebookButtonIcon,
+  FacebookCommentsIcon,
+  FacebookEmbedIcon,
+  FacebookPageIcon,
+  FlipBoxIcon,
+  FormIcon,
+  GalleryIcon,
   GoogleMapsIcon,
   HeadingIcon,
+  HotspotIcon,
   HTMLIcon,
   IconBoxIcon,
   IconIcon,
@@ -37,20 +50,42 @@ import {
   ImageIcon,
   InnerSectionIcon,
   LinkInBioIcon,
+  LoginIcon,
+  LoopCarouselIcon,
+  LottieWidgetIcon,
+  MediaCarouselIcon,
+  MegaMenuIcon,
   MenuAnchorIcon,
+  NavMenuIcon,
+  NestedCarouselIcon,
+  OffCanvasIcon,
+  PayPalButtonIcon,
+  PortfolioIcon,
+  PostsIcon,
+  PriceListIcon,
+  PriceTableIcon,
   ProgressBarIcon,
+  ProgressTrackerIcon,
+  ReviewsIcon,
+  ShareButtonsIcon,
   ShortcodeIcon,
   SidebarIcon,
+  SlidesIcon,
   SocialsIcon,
   SoundCloudIcon,
   SpacerIcon,
   StarRatingIcon,
+  StripeButtonIcon,
+  TableOfContentsIcon,
   TabsIcon,
+  TemplateIcon,
+  TestimonialCarouselIcon,
   TestimonialIcon,
   TextEditorIcon,
   TextPathIcon,
   ToggleIcon,
   VideoIcon,
+  VideoPlaylistIcon,
 } from "@/icons";
 import styles from "./Sidebar.module.css";
 
@@ -190,7 +225,213 @@ const COMPONENTS = [
   },
   {
     label: "Advanced",
-    items: [],
+    items: [
+      {
+        label: "Posts",
+        icon: <PostsIcon />,
+      },
+      {
+        label: "Share Buttons",
+        icon: <ShareButtonsIcon />,
+      },
+      {
+        label: "Portfolio",
+        icon: <PortfolioIcon />,
+      },
+      {
+        label: "Slides",
+        icon: <SlidesIcon />,
+      },
+      {
+        label: "Form",
+        icon: <FormIcon />,
+      },
+      {
+        label: "Login",
+        icon: <LoginIcon />,
+      },
+      {
+        label: "Nav Menu",
+        icon: <NavMenuIcon />,
+      },
+      {
+        label: "Animated Headline",
+        icon: <AnimatedHeadlineIcon />,
+      },
+      {
+        label: "Price Table",
+        icon: <PriceTableIcon />,
+      },
+      {
+        label: "Price List",
+        icon: <PriceListIcon />,
+      },
+      {
+        label: "Gallery",
+        icon: <GalleryIcon />,
+      },
+      {
+        label: "Flip Box",
+        icon: <FlipBoxIcon />,
+      },
+      {
+        label: "Call to Action",
+        icon: <CTAIcon />,
+      },
+      {
+        label: "Media Carousel",
+        icon: <MediaCarouselIcon />,
+      },
+      {
+        label: "Testimonial Carousel",
+        icon: <TestimonialCarouselIcon />,
+      },
+      {
+        label: "Nested Carousel",
+        icon: <NestedCarouselIcon />,
+      },
+      {
+        label: "Loop Carousel",
+        icon: <LoopCarouselIcon />,
+      },
+      {
+        label: "Table of Contents",
+        icon: <TableOfContentsIcon />,
+      },
+      {
+        label: "Countdown",
+        icon: <CountdownIcon />,
+      },
+      {
+        label: "Facebook Page",
+        icon: <FacebookPageIcon />,
+      },
+      {
+        label: "Blockquote",
+        icon: <BlockquoteIcon />,
+      },
+      {
+        label: "Template",
+        icon: <TemplateIcon />,
+      },
+      {
+        label: "Reviews",
+        icon: <ReviewsIcon />,
+      },
+      {
+        label: "Facebook Button",
+        icon: <FacebookButtonIcon />,
+      },
+      {
+        label: "Facebook Embed",
+        icon: <FacebookEmbedIcon />,
+      },
+      {
+        label: "Facebook Comments",
+        icon: <FacebookCommentsIcon />,
+      },
+      {
+        label: "PayPal Button",
+        icon: <PayPalButtonIcon />,
+      },
+      {
+        label: "Lottie Widget",
+        icon: <LottieWidgetIcon />,
+      },
+      {
+        label: "Code Highlight",
+        icon: <CodeHighlightIcon />,
+      },
+      {
+        label: "Video Playlist",
+        icon: <VideoPlaylistIcon />,
+      },
+      {
+        label: "Hotspot",
+        icon: <HotspotIcon />,
+      },
+      {
+        label: "Progress Tracker",
+        icon: <ProgressTrackerIcon />,
+      },
+      {
+        label: "Stripe Button",
+        icon: <StripeButtonIcon />,
+      },
+      {
+        label: "Mega Menu",
+        icon: <MegaMenuIcon />,
+      },
+      {
+        label: "Off-Canvas",
+        icon: <OffCanvasIcon />,
+      },
+    ],
+  },
+  {
+    label: "Theme",
+    items: [
+      {
+        label: "Post Title",
+        icon: null,
+      },
+      {
+        label: "Post Excerpt",
+        icon: null,
+      },
+      {
+        label: "Post Content",
+        icon: null,
+      },
+      {
+        label: "Featured Image",
+        icon: null,
+      },
+      {
+        label: "Author Box",
+        icon: null,
+      },
+      {
+        label: "Post Comments",
+        icon: null,
+      },
+      {
+        label: "Post Navigation",
+        icon: null,
+      },
+      {
+        label: "Post Info",
+        icon: null,
+      },
+      {
+        label: "Site Logo",
+        icon: null,
+      },
+      {
+        label: "Site Title",
+        icon: null,
+      },
+      {
+        label: "Page Title",
+        icon: null,
+      },
+      {
+        label: "Search Bar",
+        icon: null,
+      },
+      {
+        label: "Breadcrumbs",
+        icon: null,
+      },
+      {
+        label: "Sitemap",
+        icon: null,
+      },
+      {
+        label: "Loop Grid",
+        icon: null,
+      },
+    ],
   },
 ];
 

@@ -70,6 +70,7 @@
   gap: 1rem;
   color: rgb(var(--black-rgb));
   border-color: currentColor;
+  text-transform: capitalize;
 }
 .main .widgetBtn:hover {
   color: rgb(var(--light-blue-rgb));
