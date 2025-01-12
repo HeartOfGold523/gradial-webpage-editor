@@ -22,8 +22,10 @@ import {
   AccordionIcon,
   AlertIcon,
   AnimatedHeadlineIcon,
+  AuthorBoxIcon,
   BasicGalleryIcon,
   BlockquoteIcon,
+  BreadcrumbsIcon,
   ButtonIcon,
   CodeHighlightIcon,
   ContainerIcon,
@@ -35,6 +37,7 @@ import {
   FacebookCommentsIcon,
   FacebookEmbedIcon,
   FacebookPageIcon,
+  FeaturedImageIcon,
   FlipBoxIcon,
   FormIcon,
   GalleryIcon,
@@ -52,6 +55,7 @@ import {
   LinkInBioIcon,
   LoginIcon,
   LoopCarouselIcon,
+  LoopGridIcon,
   LottieWidgetIcon,
   MediaCarouselIcon,
   MegaMenuIcon,
@@ -59,17 +63,28 @@ import {
   NavMenuIcon,
   NestedCarouselIcon,
   OffCanvasIcon,
+  PageTitleIcon,
   PayPalButtonIcon,
   PortfolioIcon,
+  PostCommentsIcon,
+  PostContentIcon,
+  PostExcerptIcon,
+  PostInfoIcon,
+  PostNavigationIcon,
   PostsIcon,
+  PostTitleIcon,
   PriceListIcon,
   PriceTableIcon,
   ProgressBarIcon,
   ProgressTrackerIcon,
   ReviewsIcon,
+  SearchBarIcon,
   ShareButtonsIcon,
   ShortcodeIcon,
   SidebarIcon,
+  SiteLogoIcon,
+  SitemapIcon,
+  SiteTitleIcon,
   SlidesIcon,
   SocialsIcon,
   SoundCloudIcon,
@@ -373,109 +388,186 @@ const COMPONENTS = [
     items: [
       {
         label: "Post Title",
-        icon: null,
+        icon: <PostTitleIcon />,
       },
       {
         label: "Post Excerpt",
-        icon: null,
+        icon: <PostExcerptIcon />,
       },
       {
         label: "Post Content",
-        icon: null,
+        icon: <PostContentIcon />,
       },
       {
         label: "Featured Image",
-        icon: null,
+        icon: <FeaturedImageIcon />,
       },
       {
         label: "Author Box",
-        icon: null,
+        icon: <AuthorBoxIcon />,
       },
       {
         label: "Post Comments",
-        icon: null,
+        icon: <PostCommentsIcon />,
       },
       {
         label: "Post Navigation",
-        icon: null,
+        icon: <PostNavigationIcon />,
       },
       {
         label: "Post Info",
-        icon: null,
+        icon: <PostInfoIcon />,
       },
       {
         label: "Site Logo",
-        icon: null,
+        icon: <SiteLogoIcon />,
       },
       {
         label: "Site Title",
-        icon: null,
+        icon: <SiteTitleIcon />,
       },
       {
         label: "Page Title",
-        icon: null,
+        icon: <PageTitleIcon />,
       },
       {
         label: "Search Bar",
-        icon: null,
+        icon: <SearchBarIcon />,
       },
       {
         label: "Breadcrumbs",
-        icon: null,
+        icon: <BreadcrumbsIcon />,
       },
       {
         label: "Sitemap",
-        icon: null,
+        icon: <SitemapIcon />,
       },
       {
         label: "Loop Grid",
-        icon: null,
+        icon: <LoopGridIcon />,
       },
     ],
   },
 ];
+
+const muiStyles = {
+  iconBtn: {
+    "&:hover": {
+      color: "rgba(var(--white-rgb), 0.75)",
+    },
+  },
+  headerBtnGroup: {
+    width: "100%",
+    height: "100%",
+  },
+  headerBtn: {
+    flex: 1,
+    border: 0,
+    borderRadius: "0",
+    bgcolor: "rgb(var(--white-rgb))",
+    color: "rgb(var(--black-rgb))",
+    "&.MuiButtonGroup-firstButton": {
+      borderRight: 0,
+      borderBottom: "3px solid rgb(var(--red-rgb))",
+    },
+    "&:hover": {
+      color: "rgb(var(--light-blue-rgb))",
+      borderColor: "rgb(var(--light-blue-rgb))",
+    },
+  },
+  searchInput: {
+    mb: "1rem",
+    width: "100%",
+    bgcolor: "rgb(var(--white-rgb))",
+    "&:hover": {
+      bgcolor: "rgba(var(--white-rgb), 0.5)",
+    },
+    "&.Mui-focused": {
+      bgcolor: "rgba(var(--white-rgb), 0.5)",
+    },
+    "& .MuiInputBase-input.MuiFilledInput-input": {
+      py: 1,
+    },
+  },
+  accordion: {
+    m: 0,
+    mb: 3,
+    bgcolor: "transparent",
+    "&.Mui-expanded": {
+      m: 0,
+      mb: 3,
+    },
+  },
+  widgetBtn: {
+    width: "100%",
+    height: "100%",
+    flexDirection: "column",
+    padding: "2rem 0.5rem",
+    gap: "1rem",
+    color: "rgb(var(--black-rgb))",
+    borderColor: "currentColor",
+    bgcolor: "rgb(var(--white-rgb))",
+    textTransform: "capitalize",
+    "&:hover": {
+      color: "rgb(var(--light-blue-rgb))",
+    },
+  },
+};
 
 export default function Sidebar() {
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.header}`}>
         <div className={`${styles.top}`}>
-          <IconButton color="inherit" aria-label="Toggle sidebar" edge="start">
+          <IconButton
+            size="small"
+            color="inherit"
+            aria-label="Toggle sidebar"
+            edge="start"
+            sx={muiStyles.iconBtn}
+          >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6">Webpage Editor</Typography>
           <IconButton
+            size="small"
             color="inherit"
             aria-label="Open more features"
             edge="end"
+            sx={muiStyles.iconBtn}
           >
             <AppsIcon />
           </IconButton>
         </div>
         <div className={`${styles.bot}`}>
           <ButtonGroup
-            className={`${styles.buttonGroup}`}
             disableElevation
             variant="contained"
             aria-label="Switch component type"
+            sx={muiStyles.headerBtnGroup}
           >
-            <Button>Elements</Button>
-            <Button>Global</Button>
+            <Button sx={muiStyles.headerBtn}>Elements</Button>
+            <Button sx={muiStyles.headerBtn}>Global</Button>
           </ButtonGroup>
         </div>
       </div>
       <div className={`${styles.main}`}>
         <div>
           <FilledInput
-            className={`${styles.searchInput}`}
             size="small"
+            sx={muiStyles.searchInput}
             placeholder="Search Widgets"
             inputProps={{
               "aria-label": "Search Widgets",
             }}
             endAdornment={
               <InputAdornment position="end">
-                <IconButton color="inherit" aria-label="Search" edge="end">
+                <IconButton
+                  size="small"
+                  color="inherit"
+                  aria-label="Search"
+                  edge="end"
+                >
                   <SearchIcon />
                 </IconButton>
               </InputAdornment>
@@ -484,7 +576,7 @@ export default function Sidebar() {
         </div>
         <div>
           {COMPONENTS.map((section, secIdx) => (
-            <Accordion defaultExpanded key={secIdx}>
+            <Accordion key={secIdx} defaultExpanded sx={muiStyles.accordion}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1-content"
@@ -497,9 +589,9 @@ export default function Sidebar() {
                   {section.items.map((item, itemIdx) => (
                     <li key={itemIdx}>
                       <Button
-                        className={`${styles.widgetBtn}`}
                         variant="outlined"
                         draggable
+                        sx={muiStyles.widgetBtn}
                       >
                         <div>{item.icon ?? "Test"}</div>
                         {item.label}
@@ -513,38 +605,53 @@ export default function Sidebar() {
         </div>
       </div>
       <div className={`${styles.footer}`}>
-        <IconButton
-          color="inherit"
-          title="Page settings"
-          aria-label="Page settings"
-          edge="start"
-        >
-          <SettingsIcon />
-        </IconButton>
-        <IconButton
-          color="inherit"
-          title="Revision history"
-          aria-label="Revision history"
-          edge="start"
-        >
-          <HistoryIcon />
-        </IconButton>
-        <IconButton
-          color="inherit"
-          title="Undo changes"
-          aria-label="Undo changes"
-          edge="start"
-        >
-          <UndoIcon />
-        </IconButton>
-        <IconButton
-          color="inherit"
-          title="Redo changes"
-          aria-label="Redo changes"
-          edge="start"
-        >
-          <RedoIcon />
-        </IconButton>
+        <div className={`${styles.left}`}>
+          <IconButton
+            size="small"
+            color="inherit"
+            aria-label="Page settings"
+            edge="start"
+            sx={muiStyles.iconBtn}
+          >
+            <SettingsIcon />
+          </IconButton>
+          <IconButton
+            size="small"
+            color="inherit"
+            aria-label="Revision history"
+            edge="start"
+            sx={muiStyles.iconBtn}
+          >
+            <HistoryIcon />
+          </IconButton>
+          <IconButton
+            size="small"
+            color="inherit"
+            aria-label="Undo changes"
+            edge="start"
+            sx={muiStyles.iconBtn}
+          >
+            <UndoIcon />
+          </IconButton>
+          <IconButton
+            size="small"
+            color="inherit"
+            aria-label="Redo changes"
+            edge="start"
+            sx={muiStyles.iconBtn}
+          >
+            <RedoIcon />
+          </IconButton>
+        </div>
+        <div className={`${styles.right}`}>
+          <Button
+            variant="contained"
+            color="success"
+            sx={{ fontWeight: "bold" }}
+          >
+            Update
+          </Button>
+        </div>
       </div>
     </div>
   );

@@ -5,7 +5,8 @@
   --dark-grey-rgb: 73, 80, 87;
   --black-rgb: 33, 37, 41;
   --red-rgb: 230, 57, 70;
-  --green-rgb: 6, 214, 160;
+  /* --green-rgb: 6, 214, 160; */
+  --green-rgb: 0, 204, 102;
   --light-blue-rgb: 17, 138, 178;
   --dark-blue-rgb: 7, 59, 76;
 }
