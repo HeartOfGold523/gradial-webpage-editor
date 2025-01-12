@@ -1,9 +1,9 @@
-.container {
+/* .container {
   display: grid;
   grid-template-rows: auto 1fr auto;
-}
+} */
 .header {
-  height: 100px;
+  height: 60px;
 }
 .header .top {
   height: 60px;
@@ -14,42 +14,61 @@
   background-color: rgb(var(--red-rgb));
   color: rgb(var(--white-rgb));
 }
-.header .bot {
-  height: 40px;
-}
-.main {
-  height: calc(100vh - 100px - 60px); /* 100vh - .header height - .bot height */
-  overflow-y: auto;
-  padding: 1rem 0.5rem;
-  background-color: rgba(var(--light-grey-rgb), 0.75);
-}
-.main .list {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
-}
-.main .list > li {
-  grid-column: span 2 / span 2;
-}
+.header .bot,
+.main,
 .footer {
-  height: 60px;
-  padding: 0.5rem 1rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  background-color: rgba(var(--dark-grey-rgb), 0.75);
-  color: rgb(var(--white-rgb));
+  display: none;
 }
-.footer .left {
-  grid-column: span 2 / span 2;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.footer .right {
-  grid-column: span 2 / span 2;
-}
-.footer .right > button {
-  width: 100%;
-  height: 100%;
+
+@media (min-width: 1024px) {
+  .container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  .header {
+    height: 100px;
+  }
+  .header .bot {
+    height: 40px;
+    display: block;
+  }
+  .main {
+    display: block;
+    height: calc(
+      100vh - 100px - 60px
+    ); /* 100vh - .header height - .bot height */
+    overflow-y: auto;
+    padding: 1rem 0.5rem;
+    background-color: rgba(var(--light-grey-rgb), 0.75);
+  }
+  .main .list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .main .list > li {
+    grid-column: span 2 / span 2;
+  }
+  .footer {
+    height: 60px;
+    padding: 0.5rem 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    background-color: rgba(var(--dark-grey-rgb), 0.75);
+    color: rgb(var(--white-rgb));
+  }
+  .footer .left {
+    grid-column: span 2 / span 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .footer .right {
+    grid-column: span 2 / span 2;
+  }
+  .footer .right > button {
+    width: 100%;
+    height: 100%;
+  }
 }
