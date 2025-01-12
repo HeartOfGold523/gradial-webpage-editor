@@ -1,17 +1,87 @@
-.container {
+.page {
   min-height: 100%;
-  padding: 3rem 1.5rem;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-
-  background-color: orange;
+  background-color: rgba(var(--light-grey-rgb), 0.75);
 }
-.addWidget {
-  width: 100%;
-  max-width: 800px;
+.canvas {
+  background-color: #ffffff;
+}
+.canvas .editable {
+  position: relative;
+  border-width: 2px;
+  border-color: transparent;
+  border-style: solid;
+}
+.canvas .editable .editBtn {
+  position: absolute;
+  left: calc(50% - 17px);
+  bottom: -17px;
+  display: none;
+  z-index: 1;
+}
+.canvas .editable:hover {
+  border-color: rgb(var(--light-blue-rgb));
+}
+.canvas .editable:hover > div.editBtn {
+  display: block;
+}
+.canvas .editable:hover > span.editBtn {
+  display: inline-block;
+}
+.canvas .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 3rem;
-  border: 2px dashed grey;
-  border-radius: 25px;
+}
+.canvas .header .list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.canvas .hero {
+  background-image: url("/nature-hero-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+}
+.canvas .content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.canvas .content > p {
+  margin-block: 2rem;
+}
+.offCanvas {
+  min-height: 50vh;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offCanvas .addNew {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  border: 2px dashed rgb(var(--grey-rgb));
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.offCanvas .addNew .list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.offCanvas .addNew > p {
+  font-style: italic;
 }

@@ -1,9 +1,17 @@
 .main {
   display: grid;
-  grid-template-rows: 1fr;
   grid-template-columns: 1fr;
   height: 100vh;
   overflow-y: hidden;
+}
+.topBar {
+  height: 60px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(var(--red-rgb));
+  color: rgb(var(--white-rgb));
 }
 .sidebar {
   display: none;
@@ -15,6 +23,9 @@
 @media (min-width: 1024px) {
   .main {
     grid-template-columns: 400px 1fr;
+  }
+  .topBar {
+    display: none;
   }
   .sidebar {
     display: block;
