@@ -150,8 +150,8 @@ export default function Sidebar() {
             <Accordion key={secIdx} defaultExpanded sx={muiStyles.accordion}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1-content"
-                id="panel1-header"
+                aria-controls={`panel${secIdx}-content`}
+                id={`panel${secIdx}-header`}
               >
                 <span>{section.label}</span>
               </AccordionSummary>

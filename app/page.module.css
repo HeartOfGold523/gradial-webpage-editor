@@ -12,7 +12,4 @@
   .main {
     grid-template-columns: 400px 1fr;
   }
-  .topBar {
-    display: none;
-  }
 }
